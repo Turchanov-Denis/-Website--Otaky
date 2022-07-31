@@ -15,31 +15,42 @@
 <body>
     <section class="vending">
         <div class="vending__preview_label">By Otaky</div>
-        <div class="vending-stikers">
+        <div class="vending-stickers">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 offset-md-3">
-                        <div class="vending-stikers__label">random vending stickers </div>
+                        <div class="vending-stickers__label">random vending stickers </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="vending-stikers__decoration-element"><img src="img/decoration-element.png" alt=""></div></div>
+                        <div class="vending-stickers__decoration-element"><img src="img/decoration-element.png" alt=""></div></div>
                 
                 </div>
                 <div class="row">
-                    <div class="col-md-3"><img src="img/decoration_stiker.png" class="vending-stikers__decoration-stiker" alt=""></div>
-                    <div class="col-md-6"><img src="img/vending_machine.png" class="vending-stikers__decoration-machine" alt=""></div>
-                    <div class="col-md-3"><button class="vending-stikers__button">*Click*</button></div>
+                    <div class="col-md-3"><img src="img/decoration_stiсker.png" class="vending-stickers__decoration-sticker" alt=""></div>
+                    <div class="col-md-6"><img  src="img/vending_machine.png" class="vending-stickers__decoration-machine" alt=""></div>
+                    <div class="col-md-3"><button data-modal="sticker-modal-reset" class="vending-stickers__button">*Click*</button></div>
     
                 </div>
                 <div class="row">
                     <div class="col-md-6 offset-md-2">
-                        <div class="vending-stikers__remark">Note: gives out random stickers when clicking on the button</div>
+                        <div class="vending-stickers__remark">Note: gives out random stickers when clicking on the button</div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="vending-stikers__bg-line"></div> -->
+        <!-- <div class="vending-stickers__bg-line"></div> -->
     <div class="vending__preview_label">Blog & News</div>
+
+
+    <div class="sticker-modal active" id="sticker-modal">
+        <div class="sticker-modal__header">
+            <div class="sticker-modal__label">&lt;Some sticker&gt;</div>
+            <button data-modal="sticker-modal" class="sticker-modal__close-btn">X</button>
+        </div>
+        <img id="modal-img" src="sticker/image 3.png" class="sticker-modal__img"></img>
+        <button id="copyPng" class="sticker-modal__copy-btn">Copy</button>
+        <div id="successMessage" class="sticker-modal__label sticker-modal_success">Success!</div>
+    </div>
     <section class="blog">
         
     </section>
@@ -64,5 +75,8 @@
     </section>
     <div class="vending__preview_label">Created https://github.com/Turchanov-Denis</div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/copy-image-clipboard/dist/index.browser.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

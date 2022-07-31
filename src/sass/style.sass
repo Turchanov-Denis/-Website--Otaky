@@ -42,7 +42,7 @@ body
         width: 100%
         height: 60px
 
-.vending-stikers
+.vending-stickers
     margin-top: 40px
     &__label
         font-family: 'Rajdhani'
@@ -59,7 +59,7 @@ body
         color: #FFE4E4
         
         text-shadow: -8px 10px 1px rgba(0, 255, 255, 0.5)
-    &__decoration-stiker
+    &__decoration-sticker
         position: relative
         right: 65px
         top: 104px
@@ -208,6 +208,81 @@ body
             width: 35px
             height: 35px
             background: url('../img/add_icon.png') center (center / cover) no-repeat
+
+.sticker-modal
+    position: fixed
+    width: 421px +20px
+    height: 457px +20px
+    top: 182px
+    right: 50%
+    background: rgba(35, 30, 34, 0.9)
+    transform: translateX(50%)
+    &__header
+        display: block
+        width: 100%
+        height: 70px
+    &__label
+        margin-top: 20px
+        font-family: 'Rajdhani'
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 50px
+        /* or 156% */
+
+        text-align: center
+        letter-spacing: 0.39em
+
+        color: #FFFFFF
+    &_success
+        display: none
+        margin: 0 auto
+        color: #71B160
+
+    &__close-btn
+        position: absolute
+        background-color: rgba(35, 30, 34, 0.0)
+        border: none
+        top: 0
+        right: 0
+        font-style: normal
+        font-weight: 400
+        font-size: 36px
+        line-height: 50px
+        /* or 104% */
+
+        text-align: center
+        letter-spacing: 0.39em
+
+        color: #ffffffdb
+        &:hover
+            color: #fff
+    &__img
+        width: 222px
+        height: 222px
+        display: block
+        margin: 0 auto
+    &__copy-btn
+        display: block
+        margin: 40px auto 0 auto
+        background-color: rgba(35, 30, 34, 0.0)
+        border: none
+        font-family: 'Rajdhani'
+        font-style: normal
+        font-weight: 400
+        font-size: 40px
+        line-height: 50px
+        /* or 104% */
+
+        text-align: center
+        letter-spacing: 0.39em
+
+        color: #ffffffdb
+        &:hover
+            color: #fff
+            
+.active
+    display: none
 // @font-face 
 //     font-family: 'Himagsikan'
 //     src: url('../fonts/himagsikan.ttf')
