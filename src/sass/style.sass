@@ -283,6 +283,52 @@ body
             
 .active
     display: none
+
+.blog
+    display: flex
+    &__preview-label
+        margin-top: 170px
+        display: block
+        background-color: rgba(35, 30, 34, 0.0)
+        border: none
+        font-family: 'Rajdhani'
+        font-style: normal
+        font-weight: 600
+        font-size: 20px
+        background: #0000009e
+        /* or 104% */
+
+        text-align: center
+        letter-spacing: 0.39em
+        color: #ffffffdb
+        &:hover
+            color: #fff
+        
+    &__preview-sublabel
+        display: block
+        background-color: rgba(35, 30, 34, 0.0)
+        border: none
+        font-family: 'Rajdhani'
+        font-style: normal
+        font-weight: 600
+        font-size: 15px
+        line-height: 50px
+        text-align: center
+        color: #ffffffdb
+        background: #0000009e
+
+
+.blog__preview
+    text-decoration: none
+    width: 248px
+    height: 248px
+    background: url('../img/otaky_promo copy.jpg') center (center / cover) no-repeat
+    border-radius: 4px
+    &:nth-child(1)
+        background: url('../sticker/1.png') center (center / cover) no-repeat
+    &__label
+        display: block
+    
 // @font-face 
 //     font-family: 'Himagsikan'
 //     src: url('../fonts/himagsikan.ttf')
