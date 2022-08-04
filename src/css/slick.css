@@ -78,7 +78,7 @@
 {
     display: none;
     float: left;
-
+    margin-right: 20px;
     height: 100%;
     min-height: 1px;
 }
@@ -89,8 +89,6 @@
 .slick-slide img
 {
     display: block;
-    width: 305px;
-    height: 443px;
 }
 .slick-slide.slick-loading img
 {
@@ -118,27 +116,4 @@
 }
 .slick-arrow.slick-hidden {
     display: none;
-}
-
-.slick-slide, .slick-active + .slick-active ~ .slick-active{
-  display: block;
-  margin: 40px 0 40px 0;
-  border-radius: 10px;
-  max-height: 540px;
-  
-  transform: scale(.5);
-  opacity: 0.7;
-  
-  transition: .5s ease ;
-}
-
-.slick-active + .slick-active{
-  transform: scale(1);
-  opacity: 1;
-}
-.slick-prev.slick-arrow::before{
-    content: '';
-}
-.slick-next.slick-arrow::before{
-    content: '';
 }

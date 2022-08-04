@@ -50,3 +50,13 @@ const copyPngImageButton = document.querySelector('#copyPng')
 stickerBtnMain.addEventListener("click", MyModalSticker.resetModal.bind(MyModalSticker))
 stickerBtnClose.addEventListener("click", MyModalSticker.closeModal.bind(MyModalSticker))
 copyPngImageButton.addEventListener('click', MyModalSticker.copyImg.bind(MyModalSticker))
+
+
+  
+$('.blog__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    
+  });
+      
