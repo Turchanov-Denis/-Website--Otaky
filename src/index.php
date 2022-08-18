@@ -1,3 +1,5 @@
+<?php
+    require 'includes/db.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +16,7 @@
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
+
 <body>
     <section class="vending">
         <div class="vending__preview_label">By Otaky</div>
@@ -41,7 +44,7 @@
             </div>
         </div>
         <!-- <div class="vending-stickers__bg-line"></div> -->
-    <div class="vending__preview_label">Blog & News</div>
+    <div class="vending__preview_label"><?php echo $config['title'] ?></div>
 
 
     <div class="sticker-modal active" id="sticker-modal">
@@ -53,19 +56,28 @@
         <button id="copyPng" class="sticker-modal__copy-btn">Copy</button>
         <div id="successMessage" class="sticker-modal__label sticker-modal_success">Success!</div>
     </div>
+
+    
+
     <section class="blog">
         <div class="blog__slider">
-        <a href="pages/page1.html" class="blog__preview">
+            <?php 
+            $result = mysqli_query($connection, "SELECT * FROM `blog_page`");
+            while ( $tmp_result = mysqli_fetch_assoc($result)) {
+                echo '<a href="article.php?id='.$tmp_result['id'].'" style="text-decoration:none;min-width:248px;min-height:248px;background:url(\'img/blog_img-preview/'.$tmp_result['blog_preview-img'].'.png\') center center/cover no-repeat;border-radius:4px">'.
+                '<div class="blog__preview-label">' .$tmp_result['blog_label'] . '</div>'
+                . '<div class="blog__preview-sublabel">'  .$tmp_result['blog_sublabel'] . '</div></a>';
+            }
+            ?>
+        <!-- <a href="pages/page1.html" style="text-decoration:none;min-width:248px;min-height:248px;background:url(../img/otaky_promo copy.jpg/) center center/cover no-repeat;border-radius:4px">
             <div class="blog__preview-label"> New Sticker</div>
             <div class="blog__preview-sublabel">Review</div>
-        </a>
-        <a href="pages/page2.html" class="blog__preview">
-            <div class="blog__preview-label"> Otaky</div>
-            <div class="blog__preview-sublabel">Development game</div>
-        </a>
+        </a> -->
         
     </div>
     </section>
+
+
     <div class="vending__preview_label">About project Otaky</div>
     <section class="otaky-advertisement">
         <div class="container">
@@ -90,7 +102,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/copy-image-clipboard/dist/index.browser.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/copy-image-clipboard/dist/index.browser.js"></script> -->
+    <script src="js/index.browser.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
