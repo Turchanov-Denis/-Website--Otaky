@@ -68,8 +68,8 @@ class ModalSticker {
         if ( this.modalStickerObj.matches('.active')){
             this.modalStickerObj.classList.toggle('active')
         }
-        console.log("../sticker/" + this.getRandomArrayElement(this.arrStickers))
-        this.modalImgObj.src = "../sticker/" +  this.getRandomArrayElement(this.arrStickers)
+        console.log("../src/sticker/" + this.getRandomArrayElement(this.arrStickers))
+        this.modalImgObj.src = "../src/sticker/" +  this.getRandomArrayElement(this.arrStickers)
     
     };
     async copyImg () {

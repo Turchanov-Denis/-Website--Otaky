@@ -52,7 +52,7 @@
             <div class="sticker-modal__label">&lt;Some sticker&gt;</div>
             <button data-modal="sticker-modal" class="sticker-modal__close-btn">X</button>
         </div>
-        <img id="modal-img" src="sticker/image 3.png" class="sticker-modal__img"></img>
+        <img id="modal-img" src="../src/sticker/1.png" class="sticker-modal__img"></img>
         <button id="copyPng" class="sticker-modal__copy-btn">Copy</button>
         <div id="successMessage" class="sticker-modal__label sticker-modal_success">Success!</div>
     </div>

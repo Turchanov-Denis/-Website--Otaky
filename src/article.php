@@ -16,7 +16,7 @@ $tmp_res = mysqli_fetch_assoc($result);
 ?>
 
     <div class="container"><div class="blog__page-label"> <?php echo $tmp_res['page_title']?></div>
-        <img class="blog__page-img" src="../img/<?php echo $tmp_res['page_img']?>.png" alt="">
+        <img class="blog__page-img" src="../src/img/<?php echo $tmp_res['page_img']?>.png" alt="">
         <div class="blog__page-text"><?php echo $tmp_res['page_text']?></div>
         <a href="index.php" class="blog__page-link">- - back - - </a>
     </div>
