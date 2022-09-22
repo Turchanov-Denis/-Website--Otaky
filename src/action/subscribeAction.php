@@ -1,5 +1,5 @@
 <?php
-print_r($_POST);
+
 require_once '../includes/db.php';
 if (isset($_POST)) {
    if ($connection1){
