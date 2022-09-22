@@ -453,3 +453,75 @@ color: rgba(255, 255, 255, 0.79);
 .active {
     display: none;
 }
+
+
+
+
+.vending-stickers__button:link, .vending-stickers__button:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: absolute;
+}
+.vending-stickers__button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.vending-stickers__button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.vending-stickers__button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.vending-stickers__button-white::after {
+    background: rgba(18, 18, 18, .1);;
+}
+.vending-stickers__button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.vending-stickers__button-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+   }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+   }
+}
+
+.wave {
+    background: rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: wave .5s linear;
+    pointer-events: none;
+    position: absolute;
+  }
+  
+  @keyframes wave {
+    100% {
+     transform: scale(2);
+     opacity: 0;
+    }
+  }

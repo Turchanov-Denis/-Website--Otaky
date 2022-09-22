@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-md-3"><img src="img/decoration_stiсker.png" class="vending-stickers__decoration-sticker" alt=""></div>
                     <div class="col-md-6"><img  src="img/vending_machine.png" class="vending-stickers__decoration-machine" alt=""></div>
-                    <div class="col-md-3"><button data-modal="sticker-modal-reset" class="vending-stickers__button">*Click*</button></div>
+                    <div class="col-md-3"><button data-modal="sticker-modal-reset" class="vending-stickers__button  vending-stickers__button-animated ">*Click*</button></div>
     
                 </div>
                 <div class="row">
