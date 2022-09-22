@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
      <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Rajdhani:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
@@ -88,7 +88,7 @@
                         <div class="about__label">Otaky</div>
                         <div class="about__sublabel">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</div>
                     <div class="social">
-                        <button class="social__button">Поддержать</button>
+                        <button id="modal-subscribe-btn" class="social__button">Подписаться</button>
                         <a href="#" class="social__icon-link">подписаться на бусти</a>
                     </div>
                 </div>
@@ -97,7 +97,21 @@
 
         </div>
     </section>
-    <div class="vending__preview_label">Created https://github.com/Turchanov-Denis</div>
+    <footer>
+        <div class="modal-subscribe active">
+            <div class="modal-subscribe__header">
+                <div class="modal-subscribe__label">Подпишись на рассылку новостей о нашем проекте</div>
+                <button id="modal-subscribe-close-btn" class="modal-subscribe__close">X</button>
+            </div>
+            
+            <form id="mail_subscribe" class="form-subscribe"  method="POST" >
+                <input type="text" name="name" class="form-subscribe__input" placeholder="Укажите имя">
+                <input type="text"name="email" class="form-subscribe__input" placeholder="Элетронная почта">
+                <input type="submit" class="form-subscribe__submit" value="Подписаться">
+            </form>
+        </div>
+        <div class="vending__preview_label">Created https://github.com/Turchanov-Denis</div>
+    </footer>
     </section>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

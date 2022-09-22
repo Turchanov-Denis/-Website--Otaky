@@ -6,5 +6,6 @@ $config = array(
         'server' => 'localhost',
         'login' => 'root',
         'password' => 'root',
-        'db_name' => 'blog')
+        'db_name_blog' => 'blog',
+        'db_name_subscribe'=> 'subscribe')
     );
