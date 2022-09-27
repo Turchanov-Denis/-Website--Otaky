@@ -56,7 +56,92 @@ body {
     right: 65px;
     top: 104px;
     width: 200px;
+    
 }
+
+.vending-stickers__decoration-sticker-animation {
+    position: relative;
+    right: 65px;
+    top: 104px;
+    width: 200px;
+    animation-duration: 3s;
+    animation-name: movesticker;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-duration: 1s;
+}
+
+.vending-stickers__decoration-sticker-hands {
+    position: relative;
+    right: 90px;
+    top: -60px;
+   
+}
+
+.vending-stickers__decoration-sticker-hands-animation {
+    position: relative;
+    right: 90px;
+    top: -60px;
+    animation-duration: 3s;
+    animation-name: moveHand;
+    animation-iteration-count: infinite;
+    transition-duration: 1s;
+}
+
+@keyframes movesticker {
+    from{
+        transform: translatex(0px) translatey(0px)
+        
+       
+    }
+    25%{
+        transform: translatex(-3px) translatey(-5px)
+       
+       
+    }
+    50%{
+        right: 65px;
+        top: 104px; 
+       
+    }
+    75%{
+       
+        transform: translatex(10px) translatey(1px)
+        
+    }
+    to {
+        transform: translatex(0px) translatey(0px)
+       
+    }
+}
+@keyframes moveHand {
+    from {
+        right: 90px;
+        top: -60px;
+     
+    }
+    25% {
+        right: 105px;
+        top: -58px;
+      animation-timing-function: ease-in;
+    }
+    50% {
+        right: 90px;
+        top: -60px;
+     
+    }
+    75% {
+        right: 80px;
+        top: -60px;
+      animation-timing-function: ease-in;
+    }
+    to {
+        right: 90px;
+        top: -60px;
+    }
+  }
+
+
 .vending-stickers__decoration-element {
     width: 176px;
     height: 141px;
@@ -66,6 +151,7 @@ body {
     right: 15px;
     width: 420px;
     height: 395px;
+    animation-duration: 2s;
 }
 .vending-stickers__button {
     position: relative;
@@ -510,7 +596,7 @@ color: rgba(255, 255, 255, 0.79);
    }
 }
 
-.wave {
+/* .wave {
     background: rgba(255, 255, 255, .4);
     border-radius: 50%;
     transform: scale(0);
@@ -524,4 +610,4 @@ color: rgba(255, 255, 255, 0.79);
      transform: scale(2);
      opacity: 0;
     }
-  }
+  } */

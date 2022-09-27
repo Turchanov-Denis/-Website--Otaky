@@ -50,7 +50,7 @@ subscribeBtn.addEventListener('click',
 // });
 
 // fetch request
-
+let stickerMachine = document.querySelector(".vending-stickers__decoration-machine")
 let subscribeForm = document.getElementById('mail_subscribe');
 
 subscribeForm.addEventListener('submit', async (e) => {
@@ -85,7 +85,7 @@ class ModalSticker {
         this.arrStickers = arrStickers;
         this.successMessageObj = successMessageObj;
         this.modalStickerObj = modalStickerObj;
-        console.log(this.arrStickers)
+        // console.log(this.arrStickers)
     }
     getRandomArrayElement() {
         return this.arrStickers[Math.floor(Math.random() * this.arrStickers.length)]
@@ -96,12 +96,13 @@ class ModalSticker {
     resetModal() {
         // console.log(this.modalStickerObj)
         // console.log(this.arrStickers)
+        stickerMachine.classList.add('animate__animated', 'animate__shakeX')
         if (this.modalStickerObj.matches('.active')) {
             this.modalStickerObj.classList.toggle('active')
         }
         console.log("../src/sticker/" + this.getRandomArrayElement(this.arrStickers))
         this.modalImgObj.src = "../src/sticker/" + this.getRandomArrayElement(this.arrStickers)
-
+        setTimeout(()=>{stickerMachine.classList.remove('animate__animated', 'animate__shakeX')},500)
     };
     async copyImg() {
         try {
@@ -128,7 +129,16 @@ stickerBtnMain.addEventListener("click", MyModalSticker.resetModal.bind(MyModalS
 stickerBtnClose.addEventListener("click", MyModalSticker.closeModal.bind(MyModalSticker));
 copyPngImageButton.addEventListener('click', MyModalSticker.copyImg.bind(MyModalSticker));
 
+let liveSticker = document.getElementById("liveSticker");
+let bodySticker = document.querySelector(".vending-stickers__decoration-sticker");
+let handSticker = document.querySelector(".vending-stickers__decoration-sticker-hands");
 
+console.log(liveSticker)
+liveSticker.addEventListener('mouseover',()=>{
+    console.log("re")
+    bodySticker.classList.add("vending-stickers__decoration-sticker-animation");
+    handSticker.classList.add("vending-stickers__decoration-sticker-hands-animation");
+})
 
 
 
@@ -142,18 +152,18 @@ $('.blog__slider').slick({
 
 
 
-stickerBtnMain.addEventListener('click', function(e) {
-        let
-            size = Math.max(this.offsetWidth, this.offsetHeight),
-            x = e.offsetX - size / 2,
-            y = e.offsetY - size / 2,
-            wave = this.querySelector('.wave')
-
-        // Create an element if it doesn't exist
-        if (!wave) {
-            wave = document.createElement('span')
-            wave.className = 'wave'
-        }
-        wave.style.cssText = `width:${size}px;height:${size}px;top:${y}px;left:${x}px`
-        this.appendChild(wave)
-    });
+// stickerBtnMain.addEventListener('click', function(e) {
+//         let
+//             size = Math.max(this.offsetWidth, this.offsetHeight),
+//             x = e.offsetX - size / 2,
+//             y = e.offsetY - size / 2,
+//             wave = this.querySelector('.wave')
+//         console.log(x);
+//         // Create an element if it doesn't exist
+//         if (!wave) {
+//             wave = document.createElement('span')
+//             wave.className = 'wave'
+//         }
+//         wave.style.cssText = `width:${size}px;height:${size}px;top:${y}px;left:${x}px`
+//         this.appendChild(wave)
+//     });

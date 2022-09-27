@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
      <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Rajdhani:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
@@ -31,8 +32,8 @@
                 
                 </div>
                 <div class="row">
-                    <div class="col-md-3"><img src="img/decoration_stiсker.png" class="vending-stickers__decoration-sticker" alt=""></div>
-                    <div class="col-md-6"><img  src="img/vending_machine.png" class="vending-stickers__decoration-machine" alt=""></div>
+                    <div id="liveSticker" class="col-md-3"><img src="img/body_decoration_stiсker.png" class="vending-stickers__decoration-sticker" alt=""><img class="vending-stickers__decoration-sticker-hands" src="img/hands.png" alt=""></div>
+                    <div class="col-md-6"><img  src="img/vending_machine.png" class="vending-stickers__decoration-machine " alt=""></div>
                     <div class="col-md-3"><button data-modal="sticker-modal-reset" class="vending-stickers__button  vending-stickers__button-animated ">*Click*</button></div>
     
                 </div>
