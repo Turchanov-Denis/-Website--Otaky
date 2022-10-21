@@ -24,48 +24,25 @@ subscribeBtn.addEventListener('click',
         }
     }
 );
-// request with Jqery
 
-// $('#mail_subscribe').submit(function() {
-//     let subscribeForm = document.querySelector(".form-subscribe");
-//     if ( (subscribeForm.name.value.length >= 3) && (subscribeForm.email.value.length >= 3)){
-//     var post_data = $('#mail_subscribe').serialize();
-//     modalSubscribe.innerHTML = byeMessege;
-//     let subscribeCloseBtn = document.getElementById("modal-subscribe-close-btn");
-//     subscribeCloseBtn.addEventListener('click',() => {
-//         modalSubscribe.classList.toggle('active');
-//     });
-//     $.post('action/subscribeAction.php', post_data, () =>{       
-//         modalSubscribe.classList.toggle('active');
-//         modalSubscribe.innerHTML = reciveSubModal;
-//         let subscribeCloseBtn = document.getElementById("modal-subscribe-close-btn");
-//         subscribeCloseBtn.addEventListener('click',() => {
-//             modalSubscribe.classList.toggle('active');
-//         });
-
-//     });}
-//     else {
-//         subscribeForm.reset();
-//     }
-// });
-
-// fetch request
 let stickerMachine = document.querySelector(".vending-stickers__decoration-machine")
 let subscribeForm = document.getElementById('mail_subscribe');
 
+// * This subscribe email form
+
 subscribeForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if ( (subscribeForm.name.value.length >= 3) && (subscribeForm.email.value.length >= 3)){
+    if ((subscribeForm.name.value.length >= 3) && (subscribeForm.email.value.length >= 3)) {
         let response = await fetch('action/subscribeAction.php', {
             method: 'POST',
             body: new FormData(subscribeForm)
         }).then(response => 404).then(result => {
-            if (result == 200){
+            if (result == 200) {
                 modalSubscribe.innerHTML = byeMessege;
                 let subscribeCloseBtn = document.getElementById("modal-subscribe-close-btn");
-                subscribeCloseBtn.addEventListener('click',() => {
-                modalSubscribe.classList.toggle('active');
-        });
+                subscribeCloseBtn.addEventListener('click', () => {
+                    modalSubscribe.classList.toggle('active');
+                });
             }
             else {
                 let header = document.querySelector('.modal-subscribe__label');
@@ -73,9 +50,14 @@ subscribeForm.addEventListener('submit', async (e) => {
                 header.style.color = 'red';
             }
         });
-   
+
     }
 });
+
+// * This subscribe email form -- end
+
+
+// * This rerun rsndom stiker for vending machine + copy
 
 let stickerBtnClose = document.querySelector('button[data-modal="sticker-modal"]');
 let stickerBtnMain = document.querySelector('button[data-modal="sticker-modal-reset"]');
@@ -102,7 +84,7 @@ class ModalSticker {
         }
         console.log("../src/sticker/" + this.getRandomArrayElement(this.arrStickers))
         this.modalImgObj.src = "../src/sticker/" + this.getRandomArrayElement(this.arrStickers)
-        setTimeout(()=>{stickerMachine.classList.remove('animate__animated', 'animate__shakeX')},500)
+        setTimeout(() => { stickerMachine.classList.remove('animate__animated', 'animate__shakeX') }, 500)
     };
     async copyImg() {
         try {
@@ -134,7 +116,7 @@ let bodySticker = document.querySelector(".vending-stickers__decoration-sticker"
 let handSticker = document.querySelector(".vending-stickers__decoration-sticker-hands");
 
 console.log(liveSticker)
-liveSticker.addEventListener('mouseover',()=>{
+liveSticker.addEventListener('mouseover', () => {
     console.log("re")
     bodySticker.classList.add("vending-stickers__decoration-sticker-animation");
     handSticker.classList.add("vending-stickers__decoration-sticker-hands-animation");
@@ -151,19 +133,3 @@ $('.blog__slider').slick({
 
 
 
-
-// stickerBtnMain.addEventListener('click', function(e) {
-//         let
-//             size = Math.max(this.offsetWidth, this.offsetHeight),
-//             x = e.offsetX - size / 2,
-//             y = e.offsetY - size / 2,
-//             wave = this.querySelector('.wave')
-//         console.log(x);
-//         // Create an element if it doesn't exist
-//         if (!wave) {
-//             wave = document.createElement('span')
-//             wave.className = 'wave'
-//         }
-//         wave.style.cssText = `width:${size}px;height:${size}px;top:${y}px;left:${x}px`
-//         this.appendChild(wave)
-//     });
