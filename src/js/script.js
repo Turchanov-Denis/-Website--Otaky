@@ -57,7 +57,7 @@ subscribeForm.addEventListener('submit', async (e) => {
 // * This subscribe email form -- end
 
 
-// * This rerun rsndom stiker for vending machine + copy
+// * This rerun random stiker for vending machine + copy image
 
 let stickerBtnClose = document.querySelector('button[data-modal="sticker-modal"]');
 let stickerBtnMain = document.querySelector('button[data-modal="sticker-modal-reset"]');
@@ -82,8 +82,8 @@ class ModalSticker {
         if (this.modalStickerObj.matches('.active')) {
             this.modalStickerObj.classList.toggle('active')
         }
-        console.log("../src/sticker/" + this.getRandomArrayElement(this.arrStickers))
-        this.modalImgObj.src = "../src/sticker/" + this.getRandomArrayElement(this.arrStickers)
+        console.log("../src/img/sticker/" + this.getRandomArrayElement(this.arrStickers))
+        this.modalImgObj.src = "../src/img/sticker/" + this.getRandomArrayElement(this.arrStickers)
         setTimeout(() => { stickerMachine.classList.remove('animate__animated', 'animate__shakeX') }, 500)
     };
     async copyImg() {
