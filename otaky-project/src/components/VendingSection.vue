@@ -8,36 +8,21 @@
         </div>
 
         <div class="vending-stickers__decoration-element">
-          <img src="../img/decoration-element.png" alt="" />
+          <img src="../assets/img/decoration-element.png" alt="" />
         </div>
 
         <div class="vending-stickers__row" style="margin-top: -30px">
-          <div id="liveSticker" class="col-md-3">
+          <div id="liveSticker">
             <img
-              src="../img/body_decoration_stiсker.png"
+              src="../assets/img/body_decoration_stiсker.png"
               class="vending-stickers__decoration-sticker"
               alt=""
             /><img
               class="vending-stickers__decoration-sticker-hands"
-              src="../img/hands.png"
-              alt=""
-            />
+              src="../assets/img/hands.png"
+              alt=""/>
           </div>
-          <div>
-            <img
-              src="../img/vending_machine.png"
-              class="vending-stickers__decoration-machine"
-              alt=""
-            />
-          </div>
-          <div>
-            <button
-              data-modal="sticker-modal-reset"
-              class="vending-stickers__button vending-stickers__button-animated"
-            >
-              *Click*
-            </button>
-          </div>
+          <VendingMachine :vendingImage="vendingImage"> </VendingMachine>
         </div>
         <div class="vending-stickers__row">
           <div class="vending-stickers__remark">
@@ -46,27 +31,22 @@
         </div>
       </div>
     </div>
-    <!-- <div class="vending-stickers__bg-line"></div> -->
 
-    <div class="sticker-modal active" id="sticker-modal">
-      <div class="sticker-modal__header">
-        <div class="sticker-modal__label">&lt;Some sticker&gt;</div>
-        <button data-modal="sticker-modal" class="sticker-modal__close-btn">
-          X
-        </button>
-      </div>
-      <img
-        id="modal-img"
-        src="../img/sticker/1.png"
-        class="sticker-modal__img"
-      />
-      <button id="copyPng" class="sticker-modal__copy-btn">Copy</button>
-      <div
-        id="successMessage"
-        class="sticker-modal__label sticker-modal_success"
-      >
-        Success!
-      </div>
-    </div>
+    <!-- Modal window -->
+    
   </section>
 </template>
+
+
+<script>
+import VendingMachine from "./VendingMachine.vue";
+export default {
+  data() {
+    return {
+      vendingImage: require("../assets/img/vending_machine.png"),
+    };
+  },
+  name: "App",
+  components: { VendingMachine },
+};
+</script>
