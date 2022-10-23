@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="about">
     <div class="vending__preview_label">About project Otaky</div>
     <section class="otaky-advertisement">
       <div class="container">
@@ -37,5 +37,40 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="modal-subscribe active">
+        <div class="modal-subscribe__header">
+          <div class="modal-subscribe__label">
+            Подпишись на рассылку новостей о нашем проекте
+          </div>
+          <button id="modal-subscribe-close-btn" class="modal-subscribe__close">
+            X
+          </button>
+        </div>
+
+        <form id="mail_subscribe" class="form-subscribe" method="POST">
+          <input
+            type="text"
+            name="name"
+            class="form-subscribe__input"
+            placeholder="Укажите имя"
+          />
+          <input
+            type="text"
+            name="email"
+            class="form-subscribe__input"
+            placeholder="Элетронная почта"
+          />
+          <input
+            type="submit"
+            class="form-subscribe__submit"
+            value="Подписаться"
+          />
+        </form>
+      </div>
+      <div class="vending__preview_label">
+        Created https://github.com/Turchanov-Denis
+      </div>
+    </footer>
   </div>
 </template>
