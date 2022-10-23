@@ -1,0 +1,28 @@
+.about{
+    margin-top: 130px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    &__label{
+        font-family: 'Himagsikan';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 100%;
+        color: #FFFFFF;}
+    &__sublabel{
+        margin-top: 15px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 150%;
+        /* or 30px */
+        color: rgba(255, 255, 255, 0.8)}
+    &__mark{
+        margin-top: 120px;
+        min-width: 428px;
+        height: 380px;}
+}
