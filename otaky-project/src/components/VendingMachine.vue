@@ -2,7 +2,9 @@
   <div>
     <img
       v-bind:src="vendingImage"
-      class="vending-stickers__decoration-machine"
+      :class="[
+          'vending-stickers__decoration-machine vending-stickers__decoration-machine',vendingAnimation && ['animate__animated', 'animate__shakeX']
+      ]"
       alt=""
     />
   </div>
@@ -14,7 +16,11 @@
     >
       *Click*
     </button>
-    <StickerModal :activeVindow="activeVindow" :MyToggleOff="MyToggleOff" :currentSticker="currentSticker"></StickerModal>
+    <StickerModal
+      :activeVindow="activeVindow"
+      :MyToggleOff="MyToggleOff"
+      :currentSticker="currentSticker"
+    ></StickerModal>
   </div>
 </template>
 
@@ -22,33 +28,35 @@
 import StickerModal from "./StickerModal.vue";
 
 export default {
-  props: ["vendingImage"],
+  props: ["vendingImage", "stickerArray"],
   components: {
     StickerModal,
   },
   data() {
     return {
-      activeVindow: true,
-      stickerArray: ["1.png", "2.png", "3.png", "4.png"],
+      activeVindow: false,
       currentSticker: this.randomSticker(),
+      vendingAnimation: false,
     };
   },
   methods: {
     MyToggleOn() {
       this.activeVindow = true;
-      this.changeSticker()
+      this.changeSticker();
+      this.vendingAnimation = true;
+      setTimeout(() => (this.vendingAnimation = false), 500);
     },
     MyToggleOff() {
       this.activeVindow = false;
     },
     randomSticker() {
-      return ["1.png", "2.png", "3.png", "4.png"][
-        Math.floor(Math.random() * ["1.png", "2.png", "3.png", "4.png"].length)
+      return this.stickerArray[
+        Math.floor(Math.random() * this.stickerArray.length)
       ];
     },
-    changeSticker(){
-      this.currentSticker = this.randomSticker()
-    }
+    changeSticker() {
+      this.currentSticker = this.randomSticker();
+    },
   },
 };
 </script>

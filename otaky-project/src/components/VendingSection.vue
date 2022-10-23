@@ -23,7 +23,7 @@
               alt=""
             />
           </div>
-          <VendingMachine :vendingImage="vendingImage" > </VendingMachine>
+          <VendingMachine :vendingImage="vendingImage" :stickerArray="stickerArray"> </VendingMachine>
         </div>
         <div class="vending-stickers__row">
           <div class="vending-stickers__remark">
@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       vendingImage: require("../assets/img/vending_machine.png"),
-      
+      stickerArray: ["1.png", "2.png", "3.png", "4.png"],
     };
   },
   name: "App",

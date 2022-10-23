@@ -1,14 +1,16 @@
 <template>
   <div id="app">
     <VendingSection></VendingSection>
+    <AboutSection></AboutSection>
   </div>
 </template>
 
 <script>
 import VendingSection from "./components/VendingSection";
+import AboutSection from "./components/AboutSection.vue";
 export default {
   name: "App",
-  components: { VendingSection },
+  components: { VendingSection,AboutSection },
 };
 </script>
 
