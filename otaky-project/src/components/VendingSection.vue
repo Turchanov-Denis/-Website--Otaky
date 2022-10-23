@@ -1,6 +1,6 @@
 <template>
   <section class="vending">
-    <div class="vending__preview_label">By Otaky</div>
+    <div class="vending__preview_label">{{title}}</div>
     <div class="vending-stickers">
       <div class="container">
         <div class="vending-stickers__row">
@@ -44,7 +44,8 @@ export default {
   data() {
     return {
       vendingImage: require("../assets/img/vending_machine.png"),
-      stickerArray: ["1.png", "2.png", "3.png", "4.png"],
+      stickerArray: this.$store.state.stickerArray,
+      title: this.$store.state.title
     };
   },
   name: "App",
