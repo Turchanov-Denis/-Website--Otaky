@@ -20,9 +20,10 @@
             /><img
               class="vending-stickers__decoration-sticker-hands"
               src="../assets/img/hands.png"
-              alt=""/>
+              alt=""
+            />
           </div>
-          <VendingMachine :vendingImage="vendingImage"> </VendingMachine>
+          <VendingMachine :vendingImage="vendingImage" > </VendingMachine>
         </div>
         <div class="vending-stickers__row">
           <div class="vending-stickers__remark">
@@ -33,7 +34,6 @@
     </div>
 
     <!-- Modal window -->
-    
   </section>
 </template>
 
@@ -44,9 +44,13 @@ export default {
   data() {
     return {
       vendingImage: require("../assets/img/vending_machine.png"),
+      
     };
   },
   name: "App",
   components: { VendingMachine },
+  methods: {
+    
+  }
 };
 </script>

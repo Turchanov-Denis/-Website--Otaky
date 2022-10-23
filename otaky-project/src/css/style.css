@@ -401,7 +401,6 @@ body {
 }
 
 .sticker-modal_success {
-  display: none;
   margin: 0 auto;
   color: #71b160;
 }
