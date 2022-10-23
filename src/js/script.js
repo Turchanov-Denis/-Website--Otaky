@@ -25,7 +25,7 @@ subscribeBtn.addEventListener('click',
     }
 );
 
-let stickerMachine = document.querySelector(".vending-stickers__decoration-machine")
+
 let subscribeForm = document.getElementById('mail_subscribe');
 
 // * This subscribe email form
@@ -58,6 +58,7 @@ subscribeForm.addEventListener('submit', async (e) => {
 
 
 // * This rerun random stiker for vending machine + copy image
+let stickerMachine = document.querySelector(".vending-stickers__decoration-machine")
 
 let stickerBtnClose = document.querySelector('button[data-modal="sticker-modal"]');
 let stickerBtnMain = document.querySelector('button[data-modal="sticker-modal-reset"]');

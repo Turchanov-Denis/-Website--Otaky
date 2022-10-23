@@ -1,28 +1,22 @@
 <template>
-  <div>
-    
- 
+  <div id="app">
+    <VendingSection></VendingSection>
   </div>
 </template>
 
 <script>
-
-
+import VendingSection from './components/VendingSection'
 export default {
   name: "App",
-  components: {
-    
-  },
+  components: { VendingSection },
 };
+
+
 </script>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "https://fonts.googleapis.com/css2?family=Cinzel&family=Rajdhani:wght@300;600&display=swap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+@import "../../src/css/style.css";
 </style>

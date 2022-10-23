@@ -5,8 +5,9 @@
     box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
     
     /* Note: backdrop-filter has minimal browser support */
-    display: block;;
-    margin: 0 auto;;
+    margin: 0 auto;
+    
+
     &__preview_label{
         font-family: 'Rajdhani';
         font-style: normal;

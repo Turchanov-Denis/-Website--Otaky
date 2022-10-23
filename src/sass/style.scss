@@ -1,7 +1,8 @@
 @import 'nullstyle.scss';
 
 .container {
-    max-width: 1160px;
+    max-width: 1100px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -22,11 +23,12 @@ body {
 
 .vending {
     max-width: 1400px;
-    min-height: 1700px;
+    
     background: radial-gradient(97.29% 97.4% at 0 0, rgba(203, 69, 107, 0.5) 0, #646a6f 100%);
     box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
     display: block;
     margin: 0 auto;
+
 }
 
 .vending__preview_label {
@@ -46,9 +48,17 @@ body {
 
 .vending-stickers {
     margin-top: 40px;
+
+    &__row {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__column {}
 }
 
 .vending-stickers__label {
+    justify-self: center;
     font-family: Rajdhani;
     font-style: normal;
     font-weight: 700;
@@ -149,8 +159,13 @@ body {
 }
 
 .vending-stickers__decoration-element {
-    width: 176px;
-    height: 141px;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        width: 176px;
+        height: 141px;
+    }
 }
 
 .vending-stickers__decoration-machine {
@@ -164,7 +179,7 @@ body {
 .vending-stickers__button {
     position: relative;
     top: 154px;
-    right: 65px;
+    right: -65px;
     background: rgba(18, 18, 18, 0.1);
     border: none;
     background: url(../img/button.png) center (center / cover) no-repeat;
