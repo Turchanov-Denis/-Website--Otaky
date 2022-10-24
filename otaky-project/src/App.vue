@@ -6,8 +6,8 @@
 import Home from "./pages/Home";
 import Article from "./pages/Article";
 const routes = {
-  "https://turchanov-denis.github.io/-Website--Otaky/otaky-project/dist/": Home,
-  "https://turchanov-denis.github.io/-Website--Otaky/otaky-project/dist/#article": Article,
+  "-Website--Otaky/otaky-project/dist/": Home,
+  "-Website--Otaky/otaky-project/dist/#article": Article,
 };
 
 export default {
@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     currentView() {
-      return routes[this.currentPath.slice(1) || "https://turchanov-denis.github.io/-Website--Otaky/otaky-project/dist/"];
+      return routes[this.currentPath.slice(1) || "-Website--Otaky/otaky-project/dist/"];
     },
   },
   mounted() {
