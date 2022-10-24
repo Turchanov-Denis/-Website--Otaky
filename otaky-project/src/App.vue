@@ -6,8 +6,8 @@
 import Home from "./pages/Home";
 import Article from "./pages/Article";
 const routes = {
-  "/": Home,
-  "/article": Article,
+  "https://turchanov-denis.github.io/-Website--Otaky/otaky-project/dist/": Home,
+  "https://turchanov-denis.github.io/-Website--Otaky/otaky-project/dist/#article": Article,
 };
 
 export default {
