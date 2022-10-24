@@ -1,30 +1,37 @@
 <template>
-  <div
-    id="app"
-    style="
-      max-width: 1400px;
-      margin: 0 auto;
-      background: radial-gradient(
-        97.29% 97.4% at 0 0,
-        rgba(203, 69, 107, 0.5) 0,
-        #646a6f 100%
-      );
-      box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
-    "
-  >
-    <VendingSection></VendingSection>
-    <AboutSection></AboutSection>
-  </div>
+  <a href="#/">Home</a> | <a @click="this.$store.dispatch('changeArticleId',1)" href="#/article">Article</a> |
+  <component :is="currentView" />
 </template>
 
 <script>
-import VendingSection from "./components/VendingSection";
-import AboutSection from "./components/AboutSection.vue";
+import Home from "./pages/Home";
+import Article from "./pages/Article";
+const routes = {
+  "/": Home,
+  "/article": Article,
+};
 
 export default {
   name: "App",
- 
-  components: { VendingSection, AboutSection },
+
+  components: { Home, Article },
+  data() {
+    return {
+      currentPath: window.location.hash,
+    };
+  },
+  computed: {
+    currentView() {
+      return routes[this.currentPath.slice(1) || "/"];
+    },
+  },
+  mounted() {
+    window.addEventListener("hashchange", () => {
+      this.currentPath = window.location.hash;
+    });
+  },
+  
+  
 };
 </script>
 
