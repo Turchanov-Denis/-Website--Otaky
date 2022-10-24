@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Article from "./pages/Article";
 const routes = {
   "-Website--Otaky/otaky-project/dist/": Home,
-  "-Website--Otaky/otaky-project/dist/#article": Article,
+  "-Website--Otaky/otaky-project/dist/article": Article,
 };
 
 export default {
