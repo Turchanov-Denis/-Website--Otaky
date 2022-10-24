@@ -1,6 +1,6 @@
 <template>
   <a
-    href="#/article"
+    href="/article"
     @click="this.$store.dispatch('changeArticleId', id)"
     :style="{
       margin: '0 30px',
