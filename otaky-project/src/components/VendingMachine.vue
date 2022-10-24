@@ -19,7 +19,7 @@
     </button>
     <StickerModal
       :activeVindow="activeVindow"
-      :toggle-off="MyToggleOff"
+      @toggle-off="MyToggleOff"
       :currentSticker="currentSticker"
     ></StickerModal>
   </div>
