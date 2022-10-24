@@ -3,7 +3,8 @@
     <img
       v-bind:src="vendingImage"
       :class="[
-          'vending-stickers__decoration-machine vending-stickers__decoration-machine',vendingAnimation && ['animate__animated', 'animate__shakeX']
+        'vending-stickers__decoration-machine vending-stickers__decoration-machine',
+        vendingAnimation && ['animate__animated', 'animate__shakeX'],
       ]"
       alt=""
     />
@@ -18,7 +19,7 @@
     </button>
     <StickerModal
       :activeVindow="activeVindow"
-      :MyToggleOff="MyToggleOff"
+      :toggle-off="MyToggleOff"
       :currentSticker="currentSticker"
     ></StickerModal>
   </div>
@@ -26,7 +27,6 @@
 
 <script>
 import StickerModal from "./StickerModal.vue";
-
 export default {
   props: ["vendingImage", "stickerArray"],
   components: {

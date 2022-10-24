@@ -1,6 +1,6 @@
 <template>
   <section class="vending">
-    <div class="vending__preview_label">{{title}}</div>
+    <div class="vending__preview_label">{{ title }}</div>
     <div class="vending-stickers">
       <div class="container">
         <div class="vending-stickers__row">
@@ -23,7 +23,11 @@
               alt=""
             />
           </div>
-          <VendingMachine :vendingImage="vendingImage" :stickerArray="stickerArray"> </VendingMachine>
+          <VendingMachine
+            :vendingImage="vendingImage"
+            :stickerArray="stickerArray"
+          >
+          </VendingMachine>
         </div>
         <div class="vending-stickers__row">
           <div class="vending-stickers__remark">
@@ -40,18 +44,19 @@
 
 <script>
 import VendingMachine from "./VendingMachine.vue";
+import { mapState } from "vuex";
 export default {
   data() {
     return {
       vendingImage: require("../assets/img/vending_machine.png"),
-      stickerArray: this.$store.state.stickerArray,
-      title: this.$store.state.title
     };
   },
   name: "App",
   components: { VendingMachine },
-  methods: {
-    
-  }
+  computed: mapState([
+    // map this.count to store.state.count
+    "stickerArray","title"
+  ]),
+  methods: {},
 };
 </script>

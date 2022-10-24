@@ -3,7 +3,7 @@
     <div class="sticker-modal__header">
       <div class="sticker-modal__label">&lt;Some sticker&gt;</div>
       <button
-        @click="MyToggleOff"
+        @click="$emit('toggle-off')"
         data-modal="sticker-modal"
         class="sticker-modal__close-btn"
       >
@@ -31,11 +31,10 @@
 import { copyImageToClipboard } from "copy-image-clipboard";
 
 export default {
-  props: ["activeVindow", "MyToggleOff","currentSticker"],
+  props: ["activeVindow", "currentSticker"],
   data() {
     return {
       successMessage: false,
-      
     };
   },
   methods: {
@@ -51,7 +50,7 @@ export default {
       this.successMessage = true;
       setTimeout(() => (this.successMessage = false), 1000);
     },
-    
+
     getImgUrl(pic) {
       return require("../assets/img/sticker/" + pic);
     },
