@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     currentView() {
-      return routes[this.currentPath.slice(1) || "/"];
+      return routes[this.currentPath.slice(1) || "https://turchanov-denis.github.io/-Website--Otaky/otaky-project/dist/"];
     },
   },
   mounted() {
