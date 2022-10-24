@@ -1,5 +1,4 @@
 <template>
-  <a href="#/">Home</a> | <a @click="this.$store.dispatch('changeArticleId',1)" href="#/article">Article</a> |
   <component :is="currentView" />
 </template>
 

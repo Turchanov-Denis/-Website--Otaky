@@ -13,6 +13,7 @@
     "
   >
     <VendingSection></VendingSection>
+    <SliderSection></SliderSection>
     <AboutSection></AboutSection>
   </div>
 </template>
@@ -21,13 +22,10 @@
 <script>
 import VendingSection from "../components/VendingSection";
 import AboutSection from "../components/AboutSection";
-
-
+import SliderSection from "../components/SliderSection";
 
 export default {
   name: "Home",
-  components: { VendingSection, AboutSection },
+  components: { VendingSection, AboutSection, SliderSection },
 };
-
-
 </script>

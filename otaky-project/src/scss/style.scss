@@ -402,6 +402,8 @@ body {
 .blog {
     height: 300px;
     padding-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .blog__page {
@@ -451,7 +453,7 @@ body {
 }
 
 .blog__preview-label {
-    margin-top: 170px;
+    
     display: block;
     background-color: rgba(35, 30, 34, 0);
     border: none;
@@ -481,6 +483,7 @@ body {
     text-align: center;
     color: rgba(255, 255, 255, 0.8588235294);
     background: rgba(0, 0, 0, 0.6196078431);
+   
 }
 
 .blog__slider {
